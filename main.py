@@ -142,6 +142,7 @@ with st.container():
                 st.metric(label="Home/Hospital Quarantined", value=hcw_home_hosp_q.astype(str))
                 st.metric(label="Discharged", value=hcw_discharged_all.astype(str))
                 st.metric(label="Expired", value=hcw_expired_all.astype(str))
+                st.metric(label="Reinfected", value=reinfect_total.astype(str))
 
     st.markdown("   ")
     st.markdown("   ")
