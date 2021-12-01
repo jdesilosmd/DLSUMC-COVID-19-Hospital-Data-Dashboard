@@ -84,7 +84,7 @@ with st.container():
         in_pt_hama = admit_disposition_count["Total"].values[2]
         in_pt_curr_admitted = status_count["Total"].values[3]
         in_pt_non_covid = status_count["Total"].values[4]
-        in_pt_transf = admit_disposition_count["Total"].values[5]
+        #in_pt_transf = admit_disposition_count["Total"].values[5]
 
         hcw_home_hosp_q = hcw_hq_total - reinfect_total
         hcw_hq_discharged = df_confirmed.loc[(df_confirmed["ADMIT CLASS"]=="HCW-HQ")&
@@ -122,7 +122,7 @@ with st.container():
             with st.expander(label="See data breakdown"):
                 st.metric(label="Currently Admitted", value=in_pt_curr_admitted.astype(str))
                 st.metric(label="Discharged", value=in_pt_discharged.astype(str))
-                st.metric(label="Transferred", value=in_pt_transf.astype(str))
+              #  st.metric(label="Transferred", value=in_pt_transf.astype(str))
                 st.metric(label="Transferred to Non-COVID", value=in_pt_non_covid.astype(str))
                 st.metric(label="HAMA", value=in_pt_hama.astype(str))
                 st.metric(label="Expired", value=in_pt_expired.astype(str))
